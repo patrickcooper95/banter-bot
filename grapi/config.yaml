@@ -1,0 +1,13 @@
+
+# Request credentials / paths
+GROUP_ID: ""
+GROUPME_TOKEN: ""
+MESSAGE_URL: https://api.groupme.com/v3/bots/post
+BASE_BOT_URL: https://api.groupme.com/v3/bots
+DESTROY_BOT_URL: https://api.groupme.com/v3/bots/destroy
+
+
+
+# Bots
+BOT:
+  Birthday Bot: ""
