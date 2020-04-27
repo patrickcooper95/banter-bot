@@ -3,7 +3,6 @@ import random
 
 def select_birthday_wish():
     birthday_wishes = ['Forget the past, forget the future and please forget the present too because I forgot to get you one.',
-                       'Blow me, says your lighted candle!',
                        'Another year closer to getting those senior citizen seats on the bus!',
                        'Perhaps a glass of wine? They say it gets better with age.',
                        'I wanted to get you something to remind you of your youth, but they were sold out of dinosaur bones.',
