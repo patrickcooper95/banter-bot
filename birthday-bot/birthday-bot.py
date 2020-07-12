@@ -25,7 +25,7 @@ with open('birthdays.csv') as csvfile:
 # Test if birthday was today
 # birthdays['Name'] = "xx/xx/xx"
 
-
+# TODO: Update this to use Python logger.
 def log_run(msg, inc_date=False):
     """Add message post to log file."""
     with open('bot-log.txt', 'a') as file:
