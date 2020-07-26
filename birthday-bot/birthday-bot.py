@@ -58,15 +58,15 @@ for key, value in birthdays.items():
 def birthday_fmt_string():
     """Creates a dynamic string, adjusted to the number of birthdays for the day."""
     if num_birthdays == 1:
-        return birthday_is_today[0] + "'s"
+        return birthday_is_today[0]
 
     elif num_birthdays == 2:
         bday_string = ""
         for b in birthday_is_today:
             if len(bday_string) == 0:
-                bday_string = bday_string + b + "'s"
+                bday_string = b
             else:
-                bday_string = bday_string + " and " + b + "'s"
+                bday_string = bday_string + " and " + b
 
         return bday_string
 
@@ -74,11 +74,11 @@ def birthday_fmt_string():
         bday_string = ""
         for b in birthday_is_today:
             if b == birthday_is_today[-1]:
-                bday_string = bday_string + ", and " + b + "'s"
+                bday_string = bday_string + ", and " + b
             elif b == birthday_is_today[0]:
-                bday_string = bday_string + b + "'s"
+                bday_string = b
             else:
-                bday_string = bday_string + ", " + b + "'s"
+                bday_string = bday_string + ", " + b
 
         return bday_string
 
@@ -86,7 +86,7 @@ def birthday_fmt_string():
 if len(birthday_is_today) > 0:
     log_run("### Birthday(s) noted today")
     bday_names = birthday_fmt_string()
-    message = "Today is {name} birthday. {birthday_wish}".format(name=bday_names,
+    message = "Happy Birthday {name}! {birthday_wish}".format(name=bday_names,
                                                                  birthday_wish=bw.select_birthday_wish())
     post.post_message(message, BOT_ID)
     log_run("### Birthday message passed to GRAPI")
